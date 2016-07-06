@@ -1,4 +1,5 @@
 <?php
+namespace certificate;
 
 // reference the Dompdf namespace
 use Dompdf\Dompdf;

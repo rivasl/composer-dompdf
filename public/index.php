@@ -10,7 +10,9 @@ $data = array(
 );
 
 require '../class/Template.php';
-$html=Template::render('pdf/certificate',$data);
-
 require '../class/Pdf.php';
-Pdf::render('certificate',$html);
+
+
+$html=certificate\Template::render('pdf/certificate',$data);
+
+certificate\Pdf::render('certificate',$html);
