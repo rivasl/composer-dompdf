@@ -4,6 +4,9 @@
 // see: http://getcomposer.org/doc/00-intro.md
 require '../vendor/autoload.php';
 
+use certificate\Template as View;
+use certificate\Pdf as Pdf;
+
 $data = array(
 	'name'	=>'Luis A. Rivas',
 	'course'=>'Curso básico de Laravel 5'
@@ -13,6 +16,7 @@ require '../class/Template.php';
 require '../class/Pdf.php';
 
 
-$html=certificate\Template::render('pdf/certificate',$data);
+// $html=certificate\Template::render('pdf/certificate',$data);
+$html=View::render('pdf/certificate',$data);
 
-certificate\Pdf::render('certificate',$html);
+Pdf::render('certificate',$html);
